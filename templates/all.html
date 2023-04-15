@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Images from Firebase Storage</title>
+  </head>
+  <body>
+    <h1>Images from Firebase Storage</h1>
+    {% for filename, image in images.items() %}
+    <div class="card" style="width: 18rem;">
+      <img src="data:image/png;base64,{{ image }}" alt="{{ filename }}">
+      <div class="card-body">
+        <h5 class="card-title">{{filename}}</h5>
+        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+        <a href="/individual/filename" class="btn btn-primary">Go somewhere</a>
+      </div>
+    </div>
+      <!-- <h2>{{ filename }}</h2>
+      <img src="data:image/png;base64,{{ image }}" alt="{{ filename }}"> -->
+    {% endfor %}
+  </body>
+</html>

@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Users with Images</title>
+  </head>
+  <body>
+    <h1>Users with Images</h1>
+    {% for user in users %}
+      <h2>{{ user['data']['name'] }}</h2>
+      <img src="data:image/png;base64,{{ user['data']['image'] }}" alt="{{ user['data']['name'] }}">
+    {% endfor %}
+  </body>
+</html>
